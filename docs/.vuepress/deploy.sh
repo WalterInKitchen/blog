@@ -13,9 +13,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# Set CNAME for "gh-pages" branch
-echo 'dbdgs.cn' > CNAME  # 改成你要绑定的域名
-
 # 如果发布到 https://<USERNAME>.github.io
 git push -f git@github.com:WalterInKitchen/walterInKitchen.github.io.git master
 
