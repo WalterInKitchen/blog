@@ -1,0 +1,3 @@
+**Welcome to Walter's blog**
+
+this is a test page...
