@@ -64,7 +64,7 @@ System.out.println(res); // res=0.5
 
 ### 变量的值类型
 
-为适应表达式中的不同的运算类型，目前支持两种值类型：Decimal类型,Decimal集合类型；<br/>
+为适应表达式中的不同的运算类型，目前支持两种值类型：Decimal类型,Decimal集合类型；
 '+-*/'运算符需要一个Decimal类型的变量，需要在上下文中返回Decimal类型的值
 
 ```java
@@ -109,7 +109,7 @@ Context context = new Context() {
 
 ### 配置精度
 
-默认精度是4，即精确到小数点后4位；如果想自定义精度，可以在"resources"目录下创建"io.formula.properties"文件;<br>
+默认精度是4，即精确到小数点后4位；如果想自定义精度，可以在"resources"目录下创建"io.formula.properties"文件;
 并在文件中写入一行来配置精度
 
 ```properties
@@ -130,9 +130,9 @@ decimalScale=2
 
 #### 注册自己的函数
 实现接口：
-io.github.walterinkitchen.formula.function.Function </br>
-提供一个public的无参构造器<br>
-为函数提供一个名字：不带括号与空格，仅支持字符组成的函数名<br/>
+io.github.walterinkitchen.formula.function.Function 
+提供一个public的无参构造器
+为函数提供一个名字：不带括号与空格，仅支持字符组成的函数名
 
 ```java
 /**
@@ -160,8 +160,8 @@ public class CustomerFunction implements Function {
 }
 
 ```
-最后一步：注册函数<br>
-在"resources/META-INF/services"目录下(如果没有该目录，需要先创建该目录)创建文件：”io.github.walterinkitchen.formula.function.Function“<br/>
+最后一步：注册函数
+在"resources/META-INF/services"目录下(如果没有该目录，需要先创建该目录)创建文件：”io.github.walterinkitchen.formula.function.Function“
 文件中每一行为自定义函数的类的全名
 
 ```text
