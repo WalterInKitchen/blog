@@ -1,4 +1,5 @@
 node_modules
 yarn.lock
 .DS_Store
-docs/.vuepress
+docs/.vuepress/.cache
+docs/.vuepress/.temp
