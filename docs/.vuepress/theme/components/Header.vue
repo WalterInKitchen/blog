@@ -18,9 +18,6 @@ export default {
       <span>{{ description }}</span>
     </div>
     <div class="links">
-      <v-for class="link">
-        
-      </v-for>
     </div>
   </div>
 </template>
