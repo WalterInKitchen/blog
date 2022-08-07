@@ -6,12 +6,10 @@ import Header from '@theme/Header.vue'
 <template>
   <ParentLayout>
     <template #navbar>
+      <Header></Header>
     </template>
   </ParentLayout>
 </template>
 
-<style lang="css">
-.my-footer {
-  text-align: center;
-}
+<style>
 </style>

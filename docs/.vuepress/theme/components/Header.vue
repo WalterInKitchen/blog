@@ -2,15 +2,44 @@
 export default {
   data() {
     return {
-      greeting: 'Hello World!'
-    }
-  }
-}
+      header: "Walter's blog",
+      description: "折腾日志",
+    };
+  },
+};
 </script>
 
 <template>
-    <div>this is header</div>
+  <div class="blog_header_container">
+    <div class="name_container">
+      <span>{{ header }}</span>
+    </div>
+    <div class="description">
+      <span>{{ description }}</span>
+    </div>
+    <div class="links">
+      <v-for class="link">
+        
+      </v-for>
+    </div>
+  </div>
 </template>
 
-<style >
+<style lang="scss">
+.blog_header_container {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .name_container {
+    margin: 10px;
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
 </style>
