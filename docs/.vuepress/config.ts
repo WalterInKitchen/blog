@@ -4,7 +4,8 @@ import { localTheme } from './theme'
 
 export default defineUserConfig({
   head: [
-    ['link', { rel: 'icon', href: '/images/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/images/favicon.ico' }],
   ],
+  title: "walter's blog",
   theme: localTheme(),
 })
