@@ -5,6 +5,8 @@ import { path } from '@vuepress/utils'
 
 export const localTheme = (): Theme => {
     const options: DefaultThemeOptions = {
+        colorMode: 'light',
+        colorModeSwitch: false,
         navbar: false,
         sidebar: false,
     };

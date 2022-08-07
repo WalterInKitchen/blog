@@ -1,5 +1,8 @@
 <script>
+import HeaderLinks from "./headerlinks/HeaderLinks.vue";
+
 export default {
+  components: { HeaderLinks },
   data() {
     return {
       header: "Walter's blog",
@@ -17,26 +20,30 @@ export default {
     <div class="description">
       <span>{{ description }}</span>
     </div>
-    <div class="links">
+    <div class="links_container">
+      <header-links></header-links>
     </div>
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 .blog_header_container {
   margin: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 10px;
 
   .name_container {
-    margin: 10px;
     font-size: 48px;
     font-weight: bold;
   }
 
   .description {
     font-size: 16px;
+  }
+
+  .links_container {
   }
 }
 </style>
