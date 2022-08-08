@@ -1,6 +1,7 @@
 import { path } from '@vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import { localTheme } from './theme'
+import { blogPlugin } from "vuepress-plugin-blog2";
 
 export default defineUserConfig({
   head: [
@@ -8,4 +9,9 @@ export default defineUserConfig({
   ],
   title: "walter's blog",
   theme: localTheme(),
+  plugins: [
+    blogPlugin({
+      // your options
+    }),
+  ],
 })
