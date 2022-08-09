@@ -7,11 +7,10 @@ export default defineUserConfig({
   head: [
     ['link', { rel: 'icon', href: '/images/favicon.ico' }],
   ],
-  title: "walter's blog",
+  title: "Walter's blog",
   theme: localTheme(),
   plugins: [
     blogPlugin({
-      // your options
     }),
   ],
 })
