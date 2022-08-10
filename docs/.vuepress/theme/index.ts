@@ -17,7 +17,7 @@ export const localTheme = (): Theme => {
         extends: defaultTheme(options),
         layouts: {
             Layout: path.resolve(__dirname, './layouts/Layout.vue'),
-            Timeline: path.resolve(__dirname, "./layouts/Timeline.vue"),
+            Timeline: path.resolve(__dirname, './layouts/Timeline.vue'),
         },
         alias: {
             '@theme/Header.vue': path.resolve(__dirname, 'components/Header.vue')
