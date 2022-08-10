@@ -1,8 +1,13 @@
 ---
-date: 2022-08-09
+date: 2022-08-01
+category:
+  - code
+tag:
+  - tag C
+  - tag D
 ---
 
-## 实现一个代数公式计算器-后缀表达式应用
+# 实现一个代数公式计算器-后缀表达式应用
 
 需求很简单，给定一个固定的公式**a*(b+c)/100**，我们希望给定不同的变量值，例如a=10，b=1，c=2能计算出期望的结果0.3；
 
@@ -13,7 +18,7 @@ date: 2022-08-09
 * 将变量替换为真实值
 * 运用栈运算计算出表达式的值
 
-### 实现
+## 实现
 
 以下是java版本的实现，[源码地址](https://github.com/WalterInKitchen/formula)：
 
@@ -58,7 +63,7 @@ BigDecimal res = resolver.resolveResult("a*(b+c)/100", context);
 System.out.println(res); // res=0.5
 ```
 
-### 自定义的变量名
+## 自定义的变量名
 
 ```java
 // 变量名由至少一个字母组成
@@ -66,7 +71,7 @@ System.out.println(res); // res=0.5
 "va+vairableB*100"
 ```
 
-### 变量的值类型
+## 变量的值类型
 
 为适应表达式中的不同的运算类型，目前支持两种值类型：Decimal类型,Decimal集合类型；
 '+-*/'运算符需要一个Decimal类型的变量，需要在上下文中返回Decimal类型的值
@@ -97,21 +102,21 @@ Context context = new Context() {
 };
 ```
 
-### 加减乘除
+## 加减乘除
 
 ```java
 // 加减乘除支持优先级
 "a+b*c" // 先算乘法，再算加法
 ```
 
-### 括号
+## 括号
 
 ```java
 // 支持括号，括号内的优先级更高
 "(a+b)*c" // 先算加法，再算乘法
 ```
 
-### 配置精度
+## 配置精度
 
 默认精度是4，即精确到小数点后4位；如果想自定义精度，可以在"resources"目录下创建"io.formula.properties"文件;
 并在文件中写入一行来配置精度
@@ -121,9 +126,9 @@ Context context = new Context() {
 decimalScale=2
 ```
 
-### 函数
+## 函数
 
-#### 默认支持的函数:
+### 默认支持的函数:
 
 **max,min,avg**
 他们都要求括号内为一个变量，且变量类型为Decimal集合类型
@@ -132,7 +137,7 @@ decimalScale=2
 "a*max(b)" // a*b中的最大值
 ```
 
-#### 注册自己的函数
+### 注册自己的函数
 实现接口：
 io.github.walterinkitchen.formula.function.Function 
 提供一个public的无参构造器

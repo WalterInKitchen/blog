@@ -6,6 +6,8 @@ export default {
   components: { SvgIcon },
   data() {
     return {
+      timelineSvg:
+        '<svg t="1660145896154" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3521" width="24" height="24"><path d="M598 160H166a40 40 0 0 0-40 40v236a40 40 0 0 0 40 40h432a40 40 0 0 0 40-40V200a40 40 0 0 0-40-40z m0 388H166a40 40 0 0 0-40 40v236a40 40 0 0 0 40 40h432a40 40 0 0 0 40-40V588a40 40 0 0 0-40-40z m242-122.9V132a4 4 0 0 0-4-4h-64a4 4 0 0 0-4 4v293.1a94.1 94.1 0 0 0 0 173.8V892a4 4 0 0 0 4 4h64a4 4 0 0 0 4-4V598.9a94.1 94.1 0 0 0 0-173.8z" p-id="3522" fill="#515151"></path></svg>',
       homeSvg:
         '<svg t="1659970448935" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6078" data-spm-anchor-id="a313x.7781069.0.i14" width="24" height="24"><path d="M426.666667 853.333333l0-256 170.666667 0 0 256 213.333333 0 0-341.333333 128 0-426.666667-384-426.666667 384 128 0 0 341.333333z" p-id="6079" fill="#515151"></path></svg>',
       mailSvg:
@@ -19,6 +21,10 @@ export default {
   methods: {
     gotoHome() {
       const addr = urls.homeAddress;
+      window.location.href = addr;
+    },
+    gotoTimeLine() {
+      const addr = urls.timelineAddress;
       window.location.href = addr;
     },
     sendEmail() {
@@ -39,6 +45,7 @@ export default {
 <template>
   <div class="links_container">
     <svg-icon :svg="homeSvg" @click="gotoHome"></svg-icon>
+    <svg-icon :svg="timelineSvg" @click="gotoTimeLine"></svg-icon>
     <svg-icon :svg="telegram" @click="telegramMe"></svg-icon>
     <svg-icon :svg="mailSvg" @click="sendEmail"></svg-icon>
     <svg-icon :svg="githubSvg" @click="gotoGitHub"></svg-icon>
