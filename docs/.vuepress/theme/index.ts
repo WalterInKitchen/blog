@@ -4,7 +4,7 @@ import type { DefaultThemeOptions } from '@vuepress/theme-default'
 import { path } from '@vuepress/utils'
 import { blogPlugin } from "vuepress-plugin-blog2";
 
-export const localTheme = (): Theme => {
+export const MyBlogTheme = (): Theme => {
     const options: DefaultThemeOptions = {
         colorMode: 'light',
         colorModeSwitch: false,
