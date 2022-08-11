@@ -15,35 +15,20 @@ export default {
 
 <template>
   <div class="blog_header_container">
-    <div class="header_top">
-      <div class="header_top_left_container">
-        <div class="header_top_left">
-          <div class="name_container">
-            <span>{{ header }}</span>
-          </div>
-          <div class="description">
-            <span>{{ description }}</span>
-          </div>
+    <div class="header_left_container">
+      <div class="header_left">
+        <div class="name_container">
+          <span>{{ header }}</span>
         </div>
-      </div>
-      <div class="header_top_right_container">
-        <div class="header_top_right">
-          <div class="links_container">
-          </div>
+        <div class="description">
+          <span>{{ description }}</span>
         </div>
       </div>
     </div>
-    <div class="header_bottom">
-      <div class="header_bt_left_container">
-        <div class="header_bt_left">
-          <HeaderMenu></HeaderMenu>
-        </div>
-      </div>
 
-      <div class="header_bt_right_container">
-        <div class="header_bt_right">
-          <header-links></header-links>
-        </div>
+    <div class="header_right_container">
+      <div class="header_right">
+        <HeaderLinks></HeaderLinks>
       </div>
     </div>
   </div>
@@ -51,74 +36,35 @@ export default {
 
 <style scoped lang="scss">
 .blog_header_container {
-  width: 100%;
+  width: 50%;
   margin: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 10px;
+  flex-direction: row;
+  justify-content: center;
 
-  .header_top {
-    width: 80%;
+  .header_left_container {
+    flex: 1;
     display: flex;
-    flex-direction: row;
-    column-gap: 200px;
 
-    .header_top_left_container {
-      flex: 1;
-      display: flex;
-      flex-direction: row-reverse;
-
-      .header_top_left {
-        display: flex;
-        flex-direction: column;
-
-        .name_container {
-          font-size: 48px;
-          font-weight: bold;
-        }
-
-        .description {
-          font-size: 16px;
-        }
+    .header_left {
+      .name_container {
+        font-size: 48px;
+        font-weight: bold;
       }
-    }
 
-    .header_top_right_container {
-      flex: 1;
-      display: flex;
-      flex-direction: row;
-      margin-right: 100px;
-
-      .header_top_right {
-        display: flex;
-        flex-direction: column-reverse;
+      .description {
+        font-size: 16px;
       }
     }
   }
 
-  .header_bottom {
-    width: 80%;
+  .header_right_container {
+    flex: 1;
     display: flex;
-    flex-direction: row;
-    column-gap: 200px;
 
-    .header_bt_left_container {
-      flex: 1;
-      display: flex;
-      //flex-direction: row-reverse;
 
-      .header_bt_left {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-      }
-    }
+    .header_right {
 
-    .header_bt_right_container {
-      flex: 1;
-      display: flex;
-      flex-direction: row;
     }
   }
 }
