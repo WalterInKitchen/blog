@@ -2,30 +2,45 @@
 import HeaderPc from "./HeaderPc.vue";
 import HeaderMobile from "./HeaderMobile.vue";
 
+const SMALL_SCREEN_SIZE = 1000;
+const SMALL_SCREEN = 'small';
+const STANDARD_SCREEN = 'standard';
+
 export default {
   components: {HeaderPc, HeaderMobile},
   data() {
     return {
       header: "Walter's blog",
       description: "折腾日志",
-      mobileDevice: false,
+      initialized: false,
+      screenSize: STANDARD_SCREEN
     };
   },
   methods: {
-    isMobile() {
-      return (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i));
+    updateScreenSize() {
+      if (window.innerWidth < SMALL_SCREEN_SIZE) {
+        this.screenSize = SMALL_SCREEN;
+        return;
+      }
+      this.screenSize = STANDARD_SCREEN;
     },
+    handleResizeWindow() {
+      this.updateScreenSize();
+    }
   },
+  computed: {},
   mounted() {
-    this.mobileDevice = this.isMobile();
+    this.initialized = true;
+    this.updateScreenSize();
+    window.addEventListener("resize", this.handleResizeWindow)
   }
 };
 </script>
 
 <template>
   <div class="header_container">
-    <HeaderPc v-if="!mobileDevice"></HeaderPc>
-    <HeaderMobile v-if="mobileDevice"></HeaderMobile>
+    <HeaderMobile v-if="screenSize === 'small'"></HeaderMobile>
+    <HeaderPc v-else></HeaderPc>
   </div>
 </template>
 

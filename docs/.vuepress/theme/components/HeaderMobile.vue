@@ -6,14 +6,14 @@ export default {
   data() {
     return {
       header: "Walter's blog",
-      description: "折腾日志-----M",
+      description: "折腾日志",
     };
   },
 };
 </script>
 
 <template>
-  <div class="blog_header_container">
+  <div class="blog_header_top_container">
     <div class="name_container">
       <span>{{ header }}</span>
     </div>
@@ -27,20 +27,20 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.blog_header_container {
-  margin: 50px;
+.blog_header_top_container {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 10px;
+  row-gap: 0.5rem;
 
   .name_container {
-    font-size: 48px;
+    font-size: 2rem;
     font-weight: bold;
   }
 
   .description {
-    font-size: 16px;
+    font-size: 1.1rem;
   }
 
   .links_container {

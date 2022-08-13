@@ -15,57 +15,73 @@ export default {
 
 <template>
   <div class="blog_header_container">
-    <div class="header_left_container">
-      <div class="header_left">
-        <div class="name_container">
-          <span>{{ header }}</span>
+    <div class="blog_header_top_container">
+      <div class="header_left_container">
+        <div class="header_left">
+          <div class="name_container">
+            <span>{{ header }}</span>
+          </div>
+          <div class="description">
+            <span>{{ description }}</span>
+          </div>
         </div>
-        <div class="description">
-          <span>{{ description }}</span>
+      </div>
+
+      <div class="header_right_container">
+        <div class="header_right">
+          <HeaderLinks></HeaderLinks>
         </div>
       </div>
     </div>
-
-    <div class="header_right_container">
-      <div class="header_right">
-        <HeaderLinks></HeaderLinks>
-      </div>
+    <div class="blog_header_bottom_container">
+      <HeaderMenu></HeaderMenu>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .blog_header_container {
-  width: 50%;
-  margin: 50px;
+  margin-top: 2rem;
+  width: 50rem;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
 
-  .header_left_container {
-    flex: 1;
+  .blog_header_top_container {
+    width: 100%;
+    margin: 0.5rem 0;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-    .header_left {
-      .name_container {
-        font-size: 48px;
-        font-weight: bold;
+    .header_left_container {
+      flex: 1;
+      display: flex;
+
+      .header_left {
+        .name_container {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
+        .description {
+          font-size: 1.1rem;
+        }
       }
+    }
 
-      .description {
-        font-size: 16px;
+    .header_right_container {
+      flex: 1;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-end;
+
+      .header_right {
       }
     }
   }
 
-  .header_right_container {
-    flex: 1;
-    display: flex;
-
-
-    .header_right {
-
-    }
+  .blog_header_bottom_container {
+    margin: 0.5rem 0;
   }
 }
 </style>

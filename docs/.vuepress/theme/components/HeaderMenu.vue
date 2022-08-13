@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="menu_container">
     Menu Placeholder
   </div>
 </template>
@@ -11,5 +11,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.menu_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
 </style>
