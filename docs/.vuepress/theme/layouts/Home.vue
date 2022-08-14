@@ -1,13 +1,19 @@
 <template>
-<div>This is home</div>
+  <ParentLayout class="content_container">
+    <template #navbar>
+      <Header></Header>
+    </template>
+    <template #page>
+      <HomeContent></HomeContent>
+    </template>
+  </ParentLayout>
 </template>
 
-<script>
-export default {
-  name: "Home"
-}
+<script setup>
+import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue';
+import Header from "../components/Header.vue";
+import HomeContent from "../components/HomeContent.vue";
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
 </style>
