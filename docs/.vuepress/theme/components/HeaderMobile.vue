@@ -1,12 +1,13 @@
 <script>
 import HeaderLinks from "./headerlinks/HeaderLinks.vue";
+import {text} from '../assets/i18n/text_def';
 
 export default {
-  components: { HeaderLinks },
+  components: {HeaderLinks},
   data() {
     return {
-      header: "Walter's blog",
-      description: "折腾日志",
+      header: text.blogHeader,
+      description: text.blogDesc
     };
   },
 };

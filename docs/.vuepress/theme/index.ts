@@ -39,8 +39,6 @@ export const CleanBlogTheme = (options: DefaultThemeOptions): Theme => ({
                     sorter: (pageA, pageB) =>
                         new Date(pageB.frontmatter.date).getTime() -
                         new Date(pageA.frontmatter.date).getTime(),
-                    path: "/timeline/",
-                    layout: "Timeline",
                     frontmatter: () => ({title: "Timeline", sidebar: false}),
                 },
             ],

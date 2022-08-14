@@ -1,6 +1,5 @@
 <template>
   <div class="menu_container">
-    Menu Placeholder
   </div>
 </template>
 

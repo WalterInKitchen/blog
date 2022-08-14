@@ -1,6 +1,7 @@
 <script>
 import HeaderPc from "./HeaderPc.vue";
 import HeaderMobile from "./HeaderMobile.vue";
+import {text} from '../assets/i18n/text_def';
 
 const SMALL_SCREEN_SIZE = 1000;
 const SMALL_SCREEN = 'small';
@@ -10,8 +11,6 @@ export default {
   components: {HeaderPc, HeaderMobile},
   data() {
     return {
-      header: "Walter's blog",
-      description: "折腾日志",
       initialized: false,
       screenSize: STANDARD_SCREEN
     };

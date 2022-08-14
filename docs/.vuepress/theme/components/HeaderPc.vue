@@ -1,13 +1,14 @@
 <script>
 import HeaderLinks from "./headerlinks/HeaderLinks.vue";
 import HeaderMenu from "./HeaderMenu.vue";
+import {text} from '../assets/i18n/text_def';
 
 export default {
   components: {HeaderLinks, HeaderMenu},
   data() {
     return {
-      header: "Walter's blog",
-      description: "折腾日志",
+      header: text.blogHeader,
+      description: text.blogDesc,
     };
   },
 };
