@@ -12,6 +12,6 @@
   },
   "devDependencies": {
     "vuepress": "^2.0.0-beta.49",
-    "vuepress-plugin-blog2": "^2.0.0-beta.89"
+    "vuepress-plugin-blog2": "^2.0.0-beta.91"
   }
 }

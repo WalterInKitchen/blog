@@ -1,4 +1,3 @@
-import { path } from '@vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import { CleanBlogTheme } from './theme'
 

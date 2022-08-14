@@ -1,36 +1,35 @@
-import type { Theme } from '@vuepress/core'
-import { defaultTheme } from '@vuepress/theme-default'
-import type { DefaultThemeOptions } from '@vuepress/theme-default'
-import { path } from '@vuepress/utils'
-import { blogPlugin } from "vuepress-plugin-blog2";
+import type {Theme} from '@vuepress/core'
+import {defaultTheme} from '@vuepress/theme-default'
+import type {DefaultThemeOptions} from '@vuepress/theme-default'
+import {path} from '@vuepress/utils'
+import {blogPlugin} from 'vuepress-plugin-blog2';
+import {defaultHomePage} from './plugins/defaultHomePage/defaultHomePage';
 
 export const CleanBlogTheme = (options: DefaultThemeOptions): Theme => ({
     name: 'clean-blog-theme',
     extends: defaultTheme(options),
     layouts: {
+        Home: path.resolve(__dirname, './layouts/Home.vue'),
         Layout: path.resolve(__dirname, './layouts/Layout.vue'),
         Timeline: path.resolve(__dirname, './layouts/Timeline.vue'),
     },
-    alias: {
-        '@theme/Header.vue': path.resolve(__dirname, 'components/Header.vue')
-    },
     plugins: [
+        defaultHomePage({layout: 'Home'}),
         blogPlugin({
             // only files under posts are articles
-            filter: ({ filePathRelative }) => {
+            filter: ({filePathRelative}) => {
                 if (!filePathRelative) return false;
                 return filePathRelative.startsWith("posts/");
             },
             // getting article info
-            getInfo: ({ frontmatter, title }) => ({
+            getInfo: ({frontmatter, title}) => ({
                 title,
                 author: frontmatter.author || "",
                 date: frontmatter.date || null,
                 category: frontmatter.category || [],
                 tag: frontmatter.tag || [],
             }),
-            category: [
-            ],
+            category: [],
             type: [
                 {
                     key: "timeline",
@@ -42,7 +41,7 @@ export const CleanBlogTheme = (options: DefaultThemeOptions): Theme => ({
                         new Date(pageA.frontmatter.date).getTime(),
                     path: "/timeline/",
                     layout: "Timeline",
-                    frontmatter: () => ({ title: "Timeline", sidebar: false }),
+                    frontmatter: () => ({title: "Timeline", sidebar: false}),
                 },
             ],
             hotReload: true,
