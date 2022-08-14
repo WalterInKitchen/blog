@@ -3,8 +3,8 @@ date: 2022-08-01
 category:
   - code
 tag:
-  - tag C
-  - tag D
+  - java
+  - algorithm
 ---
 
 # 实现一个代数公式计算器-后缀表达式应用
