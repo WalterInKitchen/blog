@@ -1,7 +1,6 @@
 <script>
 import HeaderPc from "./HeaderPc.vue";
 import HeaderMobile from "./HeaderMobile.vue";
-import {text} from '../assets/i18n/text_def';
 
 const SMALL_SCREEN_SIZE = 1000;
 const SMALL_SCREEN = 'small';
@@ -11,7 +10,6 @@ export default {
   components: {HeaderPc, HeaderMobile},
   data() {
     return {
-      initialized: false,
       screenSize: STANDARD_SCREEN
     };
   },
@@ -29,9 +27,8 @@ export default {
   },
   computed: {},
   mounted() {
-    this.initialized = true;
     this.updateScreenSize();
-    window.addEventListener("resize", this.handleResizeWindow)
+    // window.addEventListener("resize", this.handleResizeWindow)
   }
 };
 </script>
