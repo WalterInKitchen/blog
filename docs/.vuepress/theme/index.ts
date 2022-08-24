@@ -36,8 +36,6 @@ export const cleanBlogTheme = (options: DefaultThemeOptions): Theme => ({
                     // only article with date should be added to timeline
                     filter: (page) => page.frontmatter.date,
                     // sort pages with time
-                    path: "/timeline/",
-                    layout: "Layout",
                     sorter: (pageA, pageB) =>
                         new Date(pageB.frontmatter.date).getTime() -
                         new Date(pageA.frontmatter.date).getTime(),
