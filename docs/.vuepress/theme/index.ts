@@ -5,7 +5,7 @@ import {path} from '@vuepress/utils'
 import {blogPlugin} from 'vuepress-plugin-blog2';
 import {defaultHomePage} from './plugins/defaultHomePage/defaultHomePage';
 
-export const CleanBlogTheme = (options: DefaultThemeOptions): Theme => ({
+export const cleanBlogTheme = (options: DefaultThemeOptions): Theme => ({
     name: 'clean-blog-theme',
     extends: defaultTheme(options),
     layouts: {

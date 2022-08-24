@@ -7,11 +7,20 @@
   "author": "Walter <WalterInKitchen@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "vuepress-vite dev docs --clean-cache",
+    "docs:build": "vuepress-vite build docs"
   },
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.49",
-    "vuepress-plugin-blog2": "^2.0.0-beta.91"
+    "@vuepress/cli": "2.0.0-beta.49",
+    "@vuepress/client": "2.0.0-beta.49",
+    "@vuepress/core": "2.0.0-beta.49",
+    "@vuepress/theme-default": "2.0.0-beta.49",
+    "@vuepress/utils": "2.0.0-beta.49",
+    "sass-loader": "13.0.2",
+    "vue": "3.2.37",
+    "vue-router": "4.1.3",
+    "vuepress-plugin-blog2": "2.0.0-beta.91",
+    "vuepress-vite": "2.0.0-beta.49",
+    "vuepress-webpack": "2.0.0-beta.49"
   }
 }
