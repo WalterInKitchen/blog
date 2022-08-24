@@ -7,8 +7,9 @@
   "author": "Walter <WalterInKitchen@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress-vite dev docs --clean-cache",
-    "docs:build": "vuepress-vite build docs"
+    "docs:build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "docs:dev": "vuepress dev docs"
   },
   "devDependencies": {
     "@vuepress/cli": "2.0.0-beta.49",
