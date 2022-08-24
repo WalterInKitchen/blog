@@ -28,7 +28,7 @@ export default {
   computed: {},
   mounted() {
     this.updateScreenSize();
-    // window.addEventListener("resize", this.handleResizeWindow)
+    window.addEventListener("resize", this.handleResizeWindow)
   }
 };
 </script>
